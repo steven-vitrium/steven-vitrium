@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Custom Error Page</title>
+
+
+</head>
+<body class="bg-main">
+
+  <div>
+    <img class="logo" src="https://security.vitrium.com/Images/logo.png">
+  </div>
+
+  <div class="container">
+
+    <h1 class="text-center text-title"><span id="titleMessage"></span></h1>
+    <p class="text-center font-30"><span id="message"></span></p>
+    <p class="text-center font-20"><span id="detailedMessage"></span></p>
+    <p class="text-center text-warning"><b><span id="suggestedMessage" ></span></b></p>
+    <p class="text-center"><span id="redirectLink"></span></p>
+
+    <div class="text-center mt-75"><button class="btn-info" onclick="toggleInfo()"><span id="moreInfoBtnLabel"></span></button></div>
+    <hr/>
+
+    <div id="moreInfo" style="display:none">
+      <h3><span id="moreInfoTitle"></span></h3>
+      <ul>
+        <li><b><span id="labelUsername"></span>:</b>   <span id="username"></span></li>
+        <li><b><span id="labelUserId"></span>:</b>     <span id="userid"></span></li>
+        <li><b><span id="labelURL"></span>:</b>        <span id="url"></span></li>
+        <li><b><span id="labelErrorCode"></span>:</b>  <span id="errorCode"></span></li>
+        <li><b><span id="labelLang"></span>:</b>       <span id="lang"></span></li>
+      </ul>
+    </div>
+  </div>
+
+<script src="js/errorhandle.js"></script>
+</body>
+</html>
