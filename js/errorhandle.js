@@ -67,9 +67,9 @@ for (var i = 0; i < parameters.length; i++) {
     var errorCode    = str.split('(').pop().split(')')[0]; 
     // remove error code from the message string
     var rawMessage   = str.replace('('+errorCode+')', '');    
-    //var message         = rawMessage.replace(/[^a-zA-Z ]/g,' '); // remove all special characters from the string
 
     var message = decodeURIComponent(rawMessage.replaceAll('+',' ')); // Remove '+' and decode message
+	message = message.replace(/(https?:\/\/[^\s]+)/g,'<a href="$1">$1</a>'); //make URLs clickable
 
     titleMessage     = "We are sorry.";
     detailedMessage  = "Message Not Available"; // default message when undefined
