@@ -69,7 +69,7 @@ for (var i = 0; i < parameters.length; i++) {
     var rawMessage   = str.replace('('+errorCode+')', '');    
     //var message         = rawMessage.replace(/[^a-zA-Z ]/g,' '); // remove all special characters from the string
 
-    message = rawMessage.replaceAll('+',' '); // filtered message parsed from url
+    message = decodeURIComponent(rawMessage.replaceAll('+',' ')); // filtered message parsed from url
 
     titleMessage     = "We are sorry.";
     detailedMessage  = "Message Not Available"; // default message when undefined
